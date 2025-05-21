@@ -69,9 +69,7 @@ export const useMessaging = (options: UseMessagingOptions = {}) => {
         setProgress(0);
 
         return { text: input, mediaUrl };
-    };
-
-    return {
+    }; return {
         messages,
         setMessages,
         input,
@@ -79,6 +77,7 @@ export const useMessaging = (options: UseMessagingOptions = {}) => {
         file,
         setFile,
         progress,
+        setProgress,
         handleSend,
         bottomRef,
     };

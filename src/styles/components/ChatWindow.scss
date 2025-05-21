@@ -4,7 +4,6 @@
   height: 100%;
   max-width: 800px;
   margin: 0 auto;
-
   .back-btn {
     margin-bottom: 1rem;
     align-self: flex-start;
@@ -17,6 +16,18 @@
     .arrow {
       transform: rotate(180deg);
       margin-right: 0.5rem;
+    }
+  }
+  .recipients-info {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+
+    &.error {
+      background-color: #e74c3c;
     }
   }
 
@@ -86,9 +97,13 @@
         opacity: 0.9;
       }
     }
-
     .send-btn {
       width: 100%;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
   }
 }
