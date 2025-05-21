@@ -1,0 +1,90 @@
+// Header styles
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+  height: 70px;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+
+      &:hover,
+      &.active {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .theme-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+
+    .username {
+      margin-right: 0.5rem;
+    }
+
+    .logout {
+      background: none;
+      border: none;
+      color: var(--secondary-color);
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Layout for mobile devices
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    height: 110px;
+
+    nav {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
